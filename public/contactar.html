@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Gallery</title>
+	<meta charset="utf-8">
+	<meta name = "format-detection" content = "telephone=no" />
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/contact-form.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-migrate-1.2.1.js"></script>
+	<!--[if (gt IE 9)|!(IE)]><!-->
+	<script src="js/jquery.mobile.customized.min.js"></script>
+
+	<!--<![endif]-->
+
+
+	<script src="js/TMForm.js"></script>
+	<script src="js/modal.js"></script>
+
+
+
+	<!--[if lt IE 8]>
+  <div id="ie6-alert" style="width: 100%; text-align:center;">
+    <img src="http://beatie6.frontcube.com/images/ie6.jpg" alt="Upgrade IE 6" width="640" height="344" border="0" usemap="#Map" longdesc="http://die6.frontcube.com" />
+      <map name="Map" id="Map"><area shape="rect" coords="496,201,604,329" href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank" alt="Download Interent Explorer" /><area shape="rect" coords="380,201,488,329" href="http://www.apple.com/safari/download/" target="_blank" alt="Download Apple Safari" /><area shape="rect" coords="268,202,376,330" href="http://www.opera.com/download/" target="_blank" alt="Download Opera" /><area shape="rect" coords="155,202,263,330" href="http://www.mozilla.com/" target="_blank" alt="Download Firefox" />
+        <area shape="rect" coords="35,201,143,329" href="http://www.google.com/chrome" target="_blank" alt="Download Google Chrome" />
+      </map>
+  </div>
+  <![endif]-->
+  <!--[if lt IE 9]>
+  	<script src="js/html5shiv.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+  <![endif]-->
+</head>
+
+<body>
+
+	<!--========================================================
+														HEADER 
+	=========================================================-->
+	<header id="header" class="">
+		<div id="stuck_container">
+			<div class="container">
+					<nav>
+						<ul class="sf-menu">
+							<li class="current"><a href="index.html">Jireh<strong></strong></a></li>
+							<li><a >Servicios<strong></strong></a>
+								<ul class="submenu">
+									<li><a href="servicios-mantenimiento.html">Mantenimiento</a></li>
+									<li><a href="servicios-remodelacion.html">Remodelación</a></li>
+									<li><a href="servicios-construccion.html">Construcción</a></li>
+								</ul>
+							</li>
+							<li><a href="productos.html">Productos<strong></strong></a></li>
+							<li><a href="nosotros.html">Nosotros<strong></strong></a></li>
+							<li id="last-li"><a href="proyectos.html">Proyectos<strong></strong></a></li>
+							<li id="last-li"><a href="contactar.html">Contactar<strong></strong></a></li>
+						</ul>
+					</nav>
+
+					<h1 class="marTop1"><a href="index.html"><img src="images/logos/JIREH logo blanco-01.jpg" alt="logo" style="width: 320px;"></a> </h1>
+			</div>
+		</div>
+	</header>
+	<!--========================================================
+														CONTENT 
+	=========================================================-->
+	<div class="box-5 v2">
+			<div class="container">
+				<h2 class="txt_cntr"><br><span class="bold">Realice sus consultas y cotizaciones.</span></h2>
+
+				<div class="map">
+					<figure class="map">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.1575027369267!2d-84.11474138465044!3d10.003845775711577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0fab3c6ae2b4f%3A0xb06ef76551328ab2!2sJireh+Spas+and+Pools!5e0!3m2!1sen!2scr!4v1554700450049!5m2!1sen!2scr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</figure>
+				</div>
+				<h3>Piscinas y Spas Jireh.</h3>
+
+				<div class="row">
+					<div class="grid_4">
+						<address class="address1">
+							<dl>
+								<dt>
+										 Centro frente Iglesia Corazón de Jesús<br>​Heredia.
+								</dt>
+								<dd><span>Telefono:</span>+506 2260-8273</dd>
+								<dd>E-mail: <strong><a href="#" class="link2">ventas@piscinasyspasjireh.com</a></strong></dd>
+							</dl>
+						</address>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+		<div class="box-4">
+			<div class="container">
+				<h2 class="txt_cntr">contact<br><span class="bold">form</span></h2>
+
+
+				<form id="contact-form">
+					<div class="contact-form-loader"></div>
+					<fieldset>
+
+						<div class="row">
+							<div class="grid_4">
+								<label class="name">
+									<input type="text" name="name" placeholder="Nombre" value="" data-constraints="@Required @JustLetters"  />
+									<span class="empty-message">*This field is required.</span>
+									<span class="error-message">*This is not a valid name.</span>
+								</label>
+							</div>
+
+							<div class="grid_4">
+								<label class="name">
+									<input type="text" name="name" placeholder="Apellidos" value="" data-constraints="@Required @JustLetters"  />
+									<span class="empty-message">*This field is required.</span>
+									<span class="error-message">*This is not a valid name.</span>
+								</label>
+							</div>
+						 	<div class="grid_4">
+								<label class="phone">
+									<input type="text" name="phone" placeholder="Teléfono" value="" data-constraints="@Required @JustNumbers" />
+									<span class="empty-message">*This field is required.</span>
+									<span class="error-message">*This is not a valid phone.</span>
+								</label>
+							</div>
+							<div class="grid_4">
+								<label class="email">
+									<input type="text" name="email" placeholder="Correo" value="" data-constraints="@Required @Email" />
+									<span class="empty-message">*This field is required.</span>
+									<span class="error-message">*This is not a valid email.</span>
+								</label>
+							</div>
+							<div class="grid_4">
+								<label class="phone">
+									<input type="text" name="phone" placeholder="Lugar del Proyecto" value="" data-constraints="@Required @JustNumbers" />
+									<span class="empty-message">*This field is required.</span>
+									<span class="error-message">*This is not a valid phone.</span>
+								</label>
+							</div>
+							<div class="grid_4">
+								<label class="phone">
+									<input type="text" name="phone" placeholder="Metros Cuadrados" value="" data-constraints="@Required @JustNumbers" />
+									<span class="empty-message">*This field is required.</span>
+									<span class="error-message">*This is not a valid phone.</span>
+								</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="grid_12">
+ 								<select style="width: 100%; border-radius: 0; line-height: 26px; font-size: 17px; font-family: 'Lato', Arial, sans-serif; padding: 8px 17px 12px; outline: none; color: #ffffff; height: 41px; border: 1px solid #cffbe1; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; background: none; margin-bottom: 20px; "> <option value="volvo" style="color: black; ">Construcción</option> <option value="saab" style="color: black; ">Mantenimiento</option> <option value="mercedes" style="color: black; ">Remodelación</option> <option value="audi" style="color: black; ">Cotizar Productos</option> </select> </div> </div>
+
+
+						<label class="message">
+							<textarea name="message" placeholder="Mensaje" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
+							<span class="empty-message">*This field is required.</span>
+							<span class="error-message">*The message is too short.</span>
+						</label>
+						<div class="btns">
+							<a href="#" class="more_btn3" data-type="reset">Clear</a>
+							<a href="#" class="more_btn3" data-type="submit">Send</a>
+						</div>
+					</fieldset> 
+					<div class="modal fade response-message">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									<h4 class="modal-title">Modal title</h4>
+								</div>
+								<div class="modal-body">
+									You message has been sent! We will be in touch soon.
+								</div>      
+							</div>
+						</div>
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+
+
+
+
+
+	<section id="content">
+	</section>
+
+
+
+	<!--========================================================
+														FOOTER 
+	=========================================================-->
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="grid_4" style="text-align: left;">
+					<p style="position: relative;top: 50px;">+506 2260-8273</p>
+
+					<p style="position: relative;top: 30px;">
+					Heredia Centro frente Iglesia Corazón de Jesús
+					ventas@piscinasyspasjireh.com
+					</p>
+				</div>
+
+
+				<div class="grid_4">
+					<div>
+						<img src="images/logos/JIREH logo-06.png" alt="" class="img2" style="width: 265px;position: relative;top: -30px;left: 60px;">	
+					</div>
+					
+					
+				</div>
+
+				<div class="grid_4">
+					<ul class="soc_icons">
+						<li><a href="https://www.facebook.com/jirehpiscinasyspas/?fref=ts" style="width: 60px;height: 60px;color: #fff;text-decoration: none;background: #0dceea;"><i class="fa fa-facebook" style="font: normal normal normal 32px/2 FontAwesome !important;"></i></a></li>
+					</ul>
+				</div>
+
+			</div>
+
+			<p class="txt_priv" style="margin-top: 0;top: -40px;position: relative;left: 10px;">Piscinas y Spas Jireh © <span id="copyright-year"></span><br><!--{%FOOTER_LINK} --></p>
+
+		</div>
+	</footer>
+
+
+
+<script src="js/script.js"></script>
+
+
+<script type="text/javascript">
+
+	 $(document).ready(function(){
+		// Initialize the gallery
+		$('.magnifier2').touchTouch();
+	 });
+</script>
+
+
+
+</body>
+</html>

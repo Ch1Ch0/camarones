@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+	<!-- Page Title -->
+	<title>AFKL</title>
+
+	<!-- Uncompressed Styles -->
+	<link href="css/slides.css?421331" rel="stylesheet" type="text/css">
+
+<!-- Custom Styles -->
+<!-- <link href="css/custom.css" rel="stylesheet" type="text/css"> -->
+
+<!-- jQuery 3.3.1 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Uncompressed Scripts -->
+	<script src="js/slides.js?421331" type="text/javascript"></script>
+	<script src="js/plugins.js?421331" type="text/javascript"></script>
+	<link rel="icon" href="assets/img/transportation_Airplane_icon-512.png">
+	<!-- Custom Scripts -->
+	<!-- <script src="js/custom.js" type="text/javascript"></script> -->
+
+	<!-- Fonts and Material Icons -->
+	<link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Nunito:100,300,400,500,600,800|Nunito:300|Nunito:600|Material+Icons"/>
+	<style type="text/css">
+				.slides,
+			.slides p {
+				font-family: 'Nunito', sans-serif;
+				font-weight: 300;
+			}
+					.slides h1,
+			.slides h2,
+			.slides h3,
+			.slides h4,
+			.slides h5,
+			.slides h6 {
+				font-family: 'Nunito', sans-serif;
+				font-weight: 300;
+			}
+					.slides .button,
+			.slides .slides-form {
+				font-family: 'Nunito', sans-serif;
+				font-weight: 600;
+			}
+
+
+			.labelForms{
+				text-align: left !important;
+			}
+
+			.inputForms{
+				display: block !important;
+			    margin: 0 auto !important;
+			    margin-bottom: 25px !important;
+			    max-width: 640px !important;
+			}
+
+			.logosImg{
+			    display: inline-block;
+			    width: 260px;
+			}
+			.slides{
+				background: #fff !important;	
+			}
+			
+			.customTexts{
+				font-size: 19px;
+    			font-weight: 500 !important;
+			}
+
+			ul li img{
+				height: 188px;
+			}
+
+			.slides.whiteSlide .navigation li:after{
+				background: #202020;
+    			box-shadow: 0 0 1px #fff;
+			}
+		</style>
+
+	<!-- Swiper Scripts and Styles -->
+	<link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+	<script src="js/swiper.min.js" type="text/javascript"></script>
+	
+	<!-- SounCloud Scripts -->
+	<script src="js/soundcloud.min.js" type="text/javascript"></script>
+	</head>
+<body class="slides smoothScroll noPreload animated">
+	
+<!-- Navigation -->
+<nav class="side" style="display: none;">
+  <div class="navigation">
+    <ul></ul>
+  </div>
+</nav>
+
+<!-- Slide 1 (#08) -->
+<section class="slide fade-6 kenBurns">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+      
+        <div class="fix-12-12">
+          <div class="">
+          	<img src="assets/img/airfrance-colour-web-new.jpg" class="logosImg ae-1 fromCenter" style="    vertical-align: top;margin-right: 50px;">
+          	<img src="assets/img/klm-colour-web.jpg" class="logosImg ae-1 fromCenter" style="width: 200px;top: -40px;position: relative;">
+            <!--svg height="77" class="wide ae-1 fromCenter"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg-->
+          </div>
+          <!--p class="hero fix-9-12 margin-top-2 ae-2"><span class="opacity-8">Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take&nbsp;away.</span></p-->
+          <div class="margin-top-2">
+            
+            <a class="downloadLink button blue gradient cropBottom ae-7 fromCenter"><i class="material-icons small">cloud_download</i><span style="top: 3px;position: relative;">Descargar Excel</span></a>
+
+            
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!--div class="background" style="background-image:url(assets/img/background/img-08.jpg)"></div-->
+</section>
+
+<script type="text/javascript">
+
+	$( ".downloadLink" ).click(function(e) {
+		
+	  	$.ajax({
+			url: '/api/user/generateExcel',
+			type: 'GET',
+			contentType: 'application/json',
+			success: function (response) {
+				if (response.message == "no users found") {
+					alert("No hay usuarios en Base de Datos");
+				}else
+				if (response.message == "Success") {
+					console.log("Success");
+					e.preventDefault();  //stop the browser from following
+    				window.location.href = 'downloads/viajelo-usuarios.xlsx';
+				} else {
+					console.log("Error");
+				}
+			}
+		});
+
+	});
+	
+	
+
+	
+	
+</script>
+
+
+
+</body>
+</html>
