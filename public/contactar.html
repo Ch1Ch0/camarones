@@ -33,6 +33,12 @@
   	<script src="js/html5shiv.js"></script>
   <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
   <![endif]-->
+
+  <style type="text/css">
+  	.address1 a:hover {
+  		color: inherit !important;
+  	}
+  </style>
 </head>
 
 <body>
@@ -48,19 +54,24 @@
 							<li class="current"><a href="index.html">Jireh<strong></strong></a></li>
 							<li><a >Servicios<strong></strong></a>
 								<ul class="submenu">
-									<li><a href="servicios-mantenimiento.html">Mantenimiento</a></li>
-									<li><a href="servicios-remodelacion.html">Remodelación</a></li>
 									<li><a href="servicios-construccion.html">Construcción</a></li>
+									<li><a href="servicios-remodelacion.html">Remodelación</a></li>
+									<li><a href="servicios-mantenimiento.html">Mantenimiento</a></li>
 								</ul>
 							</li>
-							<li><a href="productos.html">Productos<strong></strong></a></li>
+							<li><a href="productos.html">Catálogo<strong></strong></a></li>
 							<li><a href="nosotros.html">Nosotros<strong></strong></a></li>
-							<li id="last-li"><a href="proyectos.html">Proyectos<strong></strong></a></li>
+							<li><a>Proyectos<strong></strong></a>
+								<ul class="submenu">
+									<li><a href="proyectos-construccion.html">Construcción</a></li>
+									<li><a href="proyectos-remodelacion.html">Remodelación</a></li>
+								</ul>
+							</li>
 							<li id="last-li"><a href="contactar.html">Contactar<strong></strong></a></li>
 						</ul>
 					</nav>
 
-					<h1 class="marTop1"><a href="index.html"><img src="images/logos/JIREH logo blanco-01.jpg" alt="logo" style="width: 320px;"></a> </h1>
+					<h1 class="marTop1"><a href="index.html"><img src="images/logos/JIREH logo blanco-01.jpg" alt="logo" style="max-width: 320px;"></a> </h1>
 			</div>
 		</div>
 	</header>
@@ -69,7 +80,7 @@
 	=========================================================-->
 	<div class="box-5 v2">
 			<div class="container">
-				<h2 class="txt_cntr"><br><span class="bold">Realice sus consultas y cotizaciones.</span></h2>
+				<h2 class="txt_cntr"><br><span class="bold">Realice sus consultas y cotizaciones</span></h2>
 
 				<div class="map">
 					<figure class="map">
@@ -80,13 +91,15 @@
 
 				<div class="row">
 					<div class="grid_4">
-						<address class="address1">
+						<address class="address1" style="text-align: left;">
 							<dl>
 								<dt>
 										 Centro frente Iglesia Corazón de Jesús<br>​Heredia.
 								</dt>
-								<dd><span>Telefono:</span>+506 2260-8273</dd>
-								<dd>E-mail: <strong><a href="#" class="link2">ventas@piscinasyspasjireh.com</a></strong></dd>
+								<dd><span>Telefono:</span><a href="tel:+50622608273">
+									+506 2260-8273
+								</a></dd>
+								<dd>E-mail: <strong><a href="mailto:ventas@piscinasyspasjireh.com" class="link2">ventas@piscinasyspasjireh.com</a></strong></dd>
 							</dl>
 						</address>
 					</div>
@@ -106,10 +119,10 @@
 
 		<div class="box-4">
 			<div class="container">
-				<h2 class="txt_cntr">contact<br><span class="bold">form</span></h2>
+				<p class="txt1"><span class="bold">¿En qué podemos ayudarle?</span></p>
 
 
-				<form id="contact-form">
+				<form id="contact-form" style="text-align: left;">
 					<div class="contact-form-loader"></div>
 					<fieldset>
 
@@ -160,7 +173,7 @@
 						</div>
 						<div class="row">
 							<div class="grid_12">
- 								<select style="width: 100%; border-radius: 0; line-height: 26px; font-size: 17px; font-family: 'Lato', Arial, sans-serif; padding: 8px 17px 12px; outline: none; color: #ffffff; height: 41px; border: 1px solid #cffbe1; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; background: none; margin-bottom: 20px; "> <option value="volvo" style="color: black; ">Construcción</option> <option value="saab" style="color: black; ">Mantenimiento</option> <option value="mercedes" style="color: black; ">Remodelación</option> <option value="audi" style="color: black; ">Cotizar Productos</option> </select> </div> </div>
+ 								<select style="width: 100%; border-radius: 0; line-height: 26px; font-size: 17px; font-family: 'Lato', Arial, sans-serif; padding: 8px 17px 12px; outline: none; color: #ffffff; height: 41px; border: 1px solid #cffbe1; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; background: none; margin-bottom: 20px; "> <option value="volvo" style="color: black; ">Construcción</option> <option value="saab" style="color: black; ">Mantenimiento</option> <option value="mercedes" style="color: black; ">Remodelación</option> <option value="audi" style="color: black; ">Cotizar Equipo</option> <option value="audi" style="color: black; ">Químicos</option> </select> </div> </div>
 
 
 						<label class="message">
@@ -169,8 +182,8 @@
 							<span class="error-message">*The message is too short.</span>
 						</label>
 						<div class="btns">
-							<a href="#" class="more_btn3" data-type="reset">Clear</a>
-							<a href="#" class="more_btn3" data-type="submit">Send</a>
+							<a href="#" class="more_btn3" data-type="reset">Limpiar</a>
+							<a href="#" class="more_btn3" data-type="submit">Enviar</a>
 						</div>
 					</fieldset> 
 					<div class="modal fade response-message">
@@ -208,21 +221,26 @@
 		<div class="container">
 			<div class="row">
 				<div class="grid_4" style="text-align: left;">
-					<p style="position: relative;top: 50px;">+506 2260-8273</p>
+					<p style="position: relative;top: 50px;">
+						<a href="tel:+50622608273">
+							+506 2260-8273
+						</a>
+					</p>
 
 					<p style="position: relative;top: 30px;">
-					Heredia Centro frente Iglesia Corazón de Jesús
-					ventas@piscinasyspasjireh.com
+						Heredia Centro frente Iglesia Corazón de Jesús
+						<a href="mailto:ventas@piscinasyspasjireh.com" target="_top">ventas@piscinasyspasjireh.com</a>
 					</p>
 				</div>
 
 
-				<div class="grid_4">
-					<div>
-						<img src="images/logos/JIREH logo-06.png" alt="" class="img2" style="width: 265px;position: relative;top: -30px;left: 60px;">	
+				<div class="grid_4 containerLogoFooter">
+					<div class="grid_4">
+						<img src="images/logos/JIREH logo-06.png" alt="" class="img2" >	
 					</div>
-					
-					
+					<div class="grid_4 copyrightjireh">
+						<p class="txt_priv">Piscinas y Spas Jireh © <span id="copyright-year"></span><br><!--{%FOOTER_LINK} --></p>
+					</div>
 				</div>
 
 				<div class="grid_4">
@@ -233,7 +251,7 @@
 
 			</div>
 
-			<p class="txt_priv" style="margin-top: 0;top: -40px;position: relative;left: 10px;">Piscinas y Spas Jireh © <span id="copyright-year"></span><br><!--{%FOOTER_LINK} --></p>
+			
 
 		</div>
 	</footer>

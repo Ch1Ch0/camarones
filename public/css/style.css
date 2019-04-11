@@ -27,6 +27,10 @@ body {
   background: #f2f2f2;
   color: #777777;
   font: 300 17px/26px "Lato", Arial, sans-serif;
+  text-align: center;
+}
+.listWithMarker{
+  text-align: left !important;
 }
 a[href^="tel:"] {
   color: inherit;
@@ -62,6 +66,71 @@ h4 {
   margin-top: 39px;
   text-transform: uppercase;
 }
+
+
+@media only screen and (max-width: 767px) {
+  .containerLogoFooter img{
+    max-width: 265px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+
+  .indexPiscinasSpas {
+    margin-top: -166px !important;
+  }
+
+  .more_btn {
+    font: bold 21px/30px "Lato", Arial, sans-serif !important;
+  }
+
+  .txt1 {
+    font: 100 28px/49px 'Lato', Arial, sans-serif !important;
+  }
+
+}
+
+@media only screen and (max-width: 979px) {
+  .containerLogoFooter img{
+    max-width: 265px;
+    position: relative;
+    top: -20px;
+    left: 0px !important;
+  }
+
+  .copyrightjireh{
+    margin-left: 35px;
+  }
+}
+
+
+@media only screen and (max-width: 1199px) {
+  .containerLogoFooter img{
+    max-width: 265px;
+    position: relative;
+    top: -20px;
+    left: 20px;
+  }
+
+}
+
+
+@media only screen and (min-width: 1199px) {
+  .containerLogoFooter img{
+    max-width: 265px;
+    position: relative;
+    top: -30px;
+    left: 0px;
+  }
+
+  .copyrightjireh{
+    margin-left: -25px;
+  }
+
+}
+
+
+
 /*========================================================
 										HEADER styles
 =========================================================*/
@@ -1055,7 +1124,7 @@ figure a img {
     bottom: 5px;
   }
   .txt1 {
-    font: 100 45px/49px 'Lato', Arial, sans-serif;
+    font: 100 36px/49px 'Lato', Arial, sans-serif;
   }
   h2 {
     font: 300 45px/49px 'Lato', Arial, sans-serif;
