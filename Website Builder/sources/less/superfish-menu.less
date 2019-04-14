@@ -1,0 +1,224 @@
+/* Main menu styles
+========================================================*/
+
+/*========================================================
+										menu variables
+=========================================================*/
+@menu-color : #fff;
+@menu-hover-color : #fff;
+@menu-bg-color : #fff;
+@menu-bg-hover-color : #fff;
+
+@submenu-color : #fff;
+@submenu-hover-color : #000;
+@submenu-bg-color : @hcolor;
+
+
+
+nav {
+	margin-top: 59px;
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+.sf-menu {
+	display: inline-block;
+	margin-left: -6px;
+	>li {
+		float: left;
+		position: relative;
+		margin: 0 0 0 2px;
+		>a {
+			display: inline-block;
+			padding: 10px 21px;
+			font:bold 25px/30px 'Lato', Arial, sans-serif;
+			text-transform: uppercase;
+			color:@menu-color;
+			/*background: @menu-bg-color;*/
+			.transition(.3s all ease);
+			letter-spacing: -1px;
+			&:hover {
+				color: @menu-hover-color;
+				/*background: @menu-bg-hover-color;*/
+				.transition(.3s all ease);
+
+				strong {
+					width: 100%;
+					opacity: 1;
+				}
+			}
+
+			&.sf-with-ul:after {
+				content: '';
+				position: absolute;
+				width: 5px;
+				bottom: 10px;
+				left: 50%;
+				pointer-events: none;
+				z-index: 999;
+				width: 0;
+				height: 0;
+				/*border-style: solid;
+				border-width: 3px 3px 0 3px;
+				border-color: #333 transparent transparent transparent;*/
+			}
+
+
+/* rollover line =============================================*/
+			strong {
+				width: 0%;
+				height: 100%;
+				position: absolute;
+				display: inline-block;
+				left: 0;
+				top: 0;
+				.transition(.3s all ease);
+				z-index: -1;
+				.box-sizing(border-box);
+				background: url(../images/menu_hover_plane.png);
+				opacity: 0;
+				
+				/* css triangle =============================================*/
+				/*&:before {
+					content: "";
+					display: block;
+					width: 0; 
+					height: 0; 
+					border-left: 7px solid transparent;
+					border-right: 7px solid transparent;
+					border-bottom: 7px solid #fa9183; 
+					position: absolute;
+					top: -5px;
+					left: 50%;
+					margin-left: -3px;
+
+				}*/
+			}
+
+
+		}
+	}
+	>li.current>a {
+		color: @menu-hover-color;
+		/*background: @menu-bg-hover-color;*/
+			strong {
+				width: 100%;
+				opacity: 1;
+			}
+	}
+	>li.sfHover>a{
+		color: @menu-hover-color;
+		/*background: @menu-bg-hover-color;*/
+			strong {
+				width: 100%;
+				opacity: 1;
+			}
+	}
+}
+
+.sf-menu a {  
+	.transition(.3s all ease);
+	&:hover {    
+		.transition(.3s all ease);
+	}
+}
+
+/* First level sub-menu styles - submenu
+========================================================*/
+.sf-menu ul {
+	position: absolute;
+	top: 51px;
+	left: 0px;
+	background: @submenu-bg-color;
+	padding: 25px 10px 10px;
+	width: 140px;
+	z-index: 2;
+	display: none;
+	.box-sizing(border-box);
+	li{
+		position: relative;
+		text-align: center;
+		line-height: 30px;
+		a{
+			font:300 10px/16px 'Lato', Arial, sans-serif;
+			text-transform: uppercase;
+			color:@submenu-color;
+			display: inline-block;
+			&:hover {
+				color: @submenu-hover-color;
+			}
+
+			&.sf-with-ul:after {
+				/*content: '';*/
+				font-family: 'FontAwesome';
+				position: absolute;
+				width: 5px;
+				font-size: 13px;
+				line-height: 13px;
+				font-weight: normal;
+				color: #000;
+				right: -4px;
+				bottom: 1px;
+				pointer-events: none;
+				z-index: 999;
+			}
+		}
+	}
+	li.sfHover>a {
+		color: @submenu-hover-color;
+	}
+}
+/* Second level sub-menu styles - submenu2
+========================================================*/
+.sf-menu ul ul{
+	position: absolute;
+	top: -10px;
+	left: 131px;
+	background: @submenu-bg-color;
+	/*padding: 10px 10px;*/
+	z-index: 4;
+	li{
+		/*line-height: 30px;*/
+		a{
+			color:@submenu-color;
+		}
+	}
+}
+
+
+
+
+@media only screen and (max-width: 1199px) {
+	.sf-menu > li > a {
+	}
+}
+
+
+
+@media only screen and (max-width: 979px) {
+	.sf-menu > li > a {
+	}
+}
+
+
+
+@media only screen and (max-width: 767px) {
+	.sf-menu {
+		display: none;
+	}
+	.select-menu {
+		display: block;
+		width: 100%;
+		border-radius: 0px !important;
+		-moz-border-radius: 0px !important;
+		-webkit-border-radius: 0px !important;
+		margin: 0 !important;
+		border:2px solid @hcolor;
+		position: relative;
+		outline: none !important;
+		z-index: 1000;
+		margin-top: 10px;
+	}
+}
+
+@import "mixins.less";

@@ -1,0 +1,48 @@
+
+.num_section, .soc_icons > li > a { behavior:url(js/PIE.htc);}
+
+#back-top { behavior:url(js/PIE.htc);}
+
+a.magnifier2:hover .zoom{
+	display: block;
+}
+a.magnifier2 .zoom, .bottom_p{
+	display: none;
+}
+
+body {
+	min-width: 1220px;
+}
+
+#form .invalid .error-message, 
+#form .empty .empty-message {
+	display: block;
+}
+
+#form .error-message, 
+#form .empty-message {
+	display: none;
+}
+
+#contact-form .contact-form-loader  {
+	display: none;
+}
+
+#contact-form.loading .contact-form-loader  {
+	display: block;
+}
+
+
+.sf-menu > li > a strong:before{
+	display: none;
+}
+
+.sf-menu > li.current > a strong:before {
+	display: block;
+}
+.sf-menu > li.sfHover > a strong:before {
+	display: block;
+}
+.sf-menu a:hover strong:before {
+	display: block;
+}

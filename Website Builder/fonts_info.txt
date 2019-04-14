@@ -1,0 +1,9 @@
+List of Fonts used in template 
+
+
+
+Font Awesome		http://fortawesome.github.io/Font-Awesome
+Lato			http://www.google.com/fonts/specimen/Lato
+
+
+
