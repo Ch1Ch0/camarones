@@ -548,8 +548,8 @@ a.link2:hover {
   margin-top: 20px;
 }
 
-.marBot45 {
-  margin-bottom: 45px;
+.marBot50 {
+  margin-bottom: 50px;
 }
 
 .hline {
@@ -912,7 +912,7 @@ a.magnifier2 .zoom {
   background: #fff;
   color: #414141;
   -webkit-clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
-clip-path: polygon(0 8%, 100% 0, 100% 93%, 0% 100%);
+clip-path: polygon(0 8%, 100% 0, 100% 91%, 0% 100%);
 }
 
 
