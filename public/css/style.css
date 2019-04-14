@@ -547,6 +547,11 @@ a.link2:hover {
 .marTop18 {
   margin-top: 20px;
 }
+
+.marBot45 {
+  margin-bottom: 45px;
+}
+
 .hline {
   width: 100%;
   height: 1px;
@@ -838,7 +843,7 @@ a.magnifier2 .zoom {
 }
 .box-2 {
   width: 100%;
-  margin-top: -267px;
+  margin-top: 80px;
   padding: 107px 0 176px;
   position: relative;
   z-index: 11;
@@ -858,7 +863,7 @@ a.magnifier2 .zoom {
 }
 .box-4 {
   width: 100%;
-  margin-top: -12px;
+  margin-top: 130px;
   padding: 0px 0 185px;
   position: relative;
   z-index: 11;
@@ -897,6 +902,20 @@ a.magnifier2 .zoom {
   top: -80px;
   background: url(../images/corner1.png) no-repeat 50% 0;
 }
+
+.box-6 {
+  width: 100%;
+  margin-top: -54px;
+  padding: 10px 0 65px;
+  position: relative;
+  z-index: 11;
+  background: #fff;
+  color: #414141;
+  -webkit-clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+clip-path: polygon(0 8%, 100% 0, 100% 93%, 0% 100%);
+}
+
+
 .corner_bot1 {
   margin-bottom: 79px;
 }
@@ -1221,3 +1240,10 @@ figure a img {
   }
 }
 /*Core variables and mixins*/
+
+
+/* Custom CSS */
+
+.cotizar {
+  background-color: #fff;
+}
