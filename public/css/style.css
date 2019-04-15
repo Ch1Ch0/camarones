@@ -98,9 +98,6 @@ h4 {
     left: 0px !important;
   }
 
-  .copyrightjireh{
-    margin-left: 35px;
-  }
 }
 
 
@@ -108,7 +105,7 @@ h4 {
   .containerLogoFooter img{
     max-width: 265px;
     position: relative;
-    top: -20px;
+    top: 0px;
     left: 20px;
   }
 
@@ -1220,6 +1217,10 @@ figure a img {
   .box-3 {
     background: #393939;
   }
+
+  .text-box {
+    text-align: center !important;
+  }
 }
 @media only screen and (max-width: 479px) {
   h1 {
@@ -1244,6 +1245,6 @@ figure a img {
 
 /* Custom CSS */
 
-.cotizar {
-  background-color: #fff;
+.text-box {
+  text-align: left;
 }
