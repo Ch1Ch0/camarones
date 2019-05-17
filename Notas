@@ -1,6 +1,6 @@
 Notas
 
-Conectarse al ftp (Opcionales)
+Conectarse al ftp con: (Opcionales)
 Sublime SFTP: verificar que en sftp-config.json el key tenga la dirección correcta para el key
 Filezilla: En el sftp-config.json esta la info para conectarse
 
