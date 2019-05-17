@@ -8,112 +8,126 @@ const User = require('../models/user');
 const router = express.Router();
 
 
+var Airtable = require('airtable');
+Airtable.configure({
+    endpointUrl: 'https://api.airtable.com',
+    apiKey: 'key7BJK80usPvd3Sg'
+});
+var base = Airtable.base('appsv2vwWLP8Qnkm4');
 
-router.post("/submitUserInfo",(req, res, next) => {
-	
-	const user = new User({
-		nombre: req.body.nombre,
-		correo: req.body.correo,
-		celular: req.body.celular
-	});
-	user.save()
-		.then(result => {
-			res.status(201).json({
-				message: 'User Created'
-			});
-		})
-		.catch(err => {
-			res.status(201).json({
-				message: 'Error',
-				error: err
-			});
-		});
+
+
+
+
+
+
+router.post('/getcmscontent', (req, res, next) => {
+
+  
+  var page = req.body.page;
+  var elements = [];
+
+  base(page).select({
+    // Selecting the first 3 records in Main View:
+    view: "Main View"
+  }).eachPage(function page(records, fetchNextPage) {
+      // This function (`page`) will get called for each page of records.
+
+      records.forEach(function(record, index) {
+          console.log('Retrieved', record.get('Campo'));
+
+          elements[index] = {
+            campo: record.get('Campo'),
+            valor: record.get('Valor')
+          };
+
+      });
+
+      // To fetch the next page of records, call `fetchNextPage`.
+      // If there are more records, `page` will get called again.
+      // If there are no more records, `done` will get called.
+      fetchNextPage();
+
+  }, function done(err) {
+      if (err) { console.error(err); return; }
+
+
+      res.status(201).json({
+        message: 'Records loaded successfully',
+        elements: elements
+      });
+  });
+
 
 });
 
 
-router.get("/generateExcel",(req, res, next) => {
-	
-
-	User.find({}, function(err, users) {
-    	if (!users.length){
-	      return res.status(201).json({
-	        message: 'no users found'
-	      });
-	    }else{
-	    	// Require library
-			var xl = require('excel4node');
-			 
-			// Create a new instance of a Workbook class
-			var wb = new xl.Workbook();
-			 
-			// Add Worksheets to the workbook
-			var ws = wb.addWorksheet('Usuarios Viajelo');
-			 
-			// Create a reusable style
-			var styleTitle = wb.createStyle({
-			  font: {
-			    color: '#000000',
-			    size: 12,
-			    bold: true,
-			  }
-			});
-
-			// Create a reusable style
-			var style = wb.createStyle({
-			  font: {
-			    color: '#000000',
-			    size: 12,
-			  }
-			});
-			 
-
-			// Set value of cell A2 to 'string' styled with paramaters of style
-			ws.cell(1, 1)
-			  .string('Nombre')
-			  .style(styleTitle);
-
-			ws.cell(1, 2)
-			  .string('Correo')
-			  .style(styleTitle);
-
-			ws.cell(1, 3)
-			  .string('Celular')
-			  .style(styleTitle);
-
-			//inject users
-			var contLine = 3;
-			users.forEach(function(user) {
-
-				ws.cell(contLine, 1)
-				  .string(user.nombre)
-				  .style(style);
-
-				ws.cell(contLine, 2)
-				  .string(user.correo)
-				  .style(style);
-
-				ws.cell(contLine, 3)
-				  .string(user.celular)
-				  .style(style);
-
-				contLine+=1;
-		    });
-
-			wb.write('public/downloads/viajelo-usuarios.xlsx');
-
-			return res.status(201).json({
-				message: 'Success'
-			});
-
-	    }
-	    
-	});
 
 
-	
 
+router.post('/sendFormToPatient', (req, res, next) => {
+
+  var nodemailer = require('nodemailer');
+  var handlebars = require('handlebars');
+  var fs = require('fs');
+
+
+  var readHTMLFile = function(path, callback) {
+      fs.readFile(path, {encoding: 'utf-8'}, function (err, html) {
+          if (err) {
+              throw err;
+              callback(err);
+          }
+          else {
+              callback(null, html);
+          }
+      });
+  };
+
+  
+  var smtpTransport = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'mailer@arcader.life',
+      pass: 'qtuujieqywldakon'
+    }
+  });
+
+  
+  readHTMLFile('/opt/bitnami/apache2/htdocs/public/mail/sendForm.html', function(err, html) {
+      var template = handlebars.compile(html);
+      var replacements = {
+           	nombre: req.body.nombre,
+			apellidos: req.body.apellidos,
+			telefono: req.body.telefono,
+			email: req.body.email,
+			lugar: req.body.lugar,
+			metros: req.body.metros,
+			mensaje: req.body.mensaje
+      };
+      
+      var htmlToSend = template(replacements);
+      var mailOptions = {
+          from: 'mailer@arcader.life',
+          to: 'ventas@piscinasyspasjireh.com',
+          subject: 'Usuario requiere información',
+          html : htmlToSend
+       };
+       
+      smtpTransport.sendMail(mailOptions, function (error, response) {
+          if (error) {
+              console.log("Daily quota exceeded: "+error);
+              res.status(201).json({ message: "Daily quota exceeded"});
+          } else {
+            console.log('Email sent: ' + response);
+            console.log(response);
+            res.status(201).json({ message: "Email sent"});
+          }
+      });
+  });
+  
 });
+
 
 
 module.exports = router;

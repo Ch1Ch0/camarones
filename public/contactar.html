@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Gallery</title>
+	<title>Piscinas Jireh</title>
 	<meta charset="utf-8">
 	<meta name = "format-detection" content = "telephone=no" />
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -39,6 +39,93 @@
   		color: inherit !important;
   	}
   </style>
+
+  <style type="text/css">
+  	.box-5 {
+    background: #fff;
+    color: #0dceea;
+}
+
+.box-5:before {
+    background: none;
+}
+
+#content {
+    background: #0dceea;
+}
+
+.box-2 {
+	margin-top: 0px;
+}
+
+.box-4 {
+    background: #0dceea;
+    color: #fff;
+}
+.box-4:before {
+	background: none;
+}
+
+/* Popup box BEGIN */
+.hover_bkgr_fricc{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+.hover_bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.hover_bkgr_fricc > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+.trigger_popup_fricc {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+/* Popup box BEGIN */
+
+  </style>
 </head>
 
 <body>
@@ -46,7 +133,7 @@
 	<!--========================================================
 														HEADER 
 	=========================================================-->
-	<header id="header" class="">
+	<header id="header8" class="">
 		<div id="stuck_container">
 			<div class="container">
 					<nav>
@@ -79,8 +166,10 @@
 														CONTENT 
 	=========================================================-->
 	<div class="box-5 v2">
+		<div class="line-break-header">
+		</div>
 			<div class="container">
-				<h2 class="txt_cntr"><br><span class="bold">Realice sus consultas y cotizaciones</span></h2>
+				<h2 class="txt_cntr"><span class="bold">Realice sus consultas y cotizaciones</span></h2>
 
 				<div class="map">
 					<figure class="map">
@@ -116,58 +205,60 @@
 
 
 
-
 		<div class="box-4">
-			<div class="container">
+			
+<div class="line-break-header" style="    position: relative;top: -45px;">
+		</div>			
+			<div class="container container-custom-3">
 				<p class="txt1"><span class="bold">¿En qué podemos ayudarle?</span></p>
 
 
 				<form id="contact-form" style="text-align: left;">
-					<div class="contact-form-loader"></div>
+					
 					<fieldset>
 
 						<div class="row">
 							<div class="grid_4">
 								<label class="name">
-									<input type="text" name="name" placeholder="Nombre" value="" data-constraints="@Required @JustLetters"  />
-									<span class="empty-message">*This field is required.</span>
-									<span class="error-message">*This is not a valid name.</span>
+									<input type="text" name="nombre" placeholder="Nombre" value="" data-constraints="@Required @JustLetters"  />
+									<span class="empty-message">*Este campo es requerido.</span>
+									<span class="error-message">*Este no es un campo válido.</span>
 								</label>
 							</div>
 
 							<div class="grid_4">
 								<label class="name">
-									<input type="text" name="name" placeholder="Apellidos" value="" data-constraints="@Required @JustLetters"  />
-									<span class="empty-message">*This field is required.</span>
-									<span class="error-message">*This is not a valid name.</span>
+									<input type="text" name="apellidos" placeholder="Apellidos" value="" data-constraints="@Required @JustLetters"  />
+									<span class="empty-message">*Este campo es requerido.</span>
+									<span class="error-message">*Este no es un campo válido.</span>
 								</label>
 							</div>
 						 	<div class="grid_4">
 								<label class="phone">
-									<input type="text" name="phone" placeholder="Teléfono" value="" data-constraints="@Required @JustNumbers" />
-									<span class="empty-message">*This field is required.</span>
-									<span class="error-message">*This is not a valid phone.</span>
+									<input type="text" name="telefono" placeholder="Teléfono" value="" data-constraints="@Required @JustNumbers" />
+									<span class="empty-message">*Este campo es requerido.</span>
+									<span class="error-message">*Este no es un campo válido.</span>
 								</label>
 							</div>
 							<div class="grid_4">
 								<label class="email">
 									<input type="text" name="email" placeholder="Correo" value="" data-constraints="@Required @Email" />
-									<span class="empty-message">*This field is required.</span>
+									<span class="empty-message">*Este campo es requerido.</span>
 									<span class="error-message">*This is not a valid email.</span>
 								</label>
 							</div>
 							<div class="grid_4">
-								<label class="phone">
-									<input type="text" name="phone" placeholder="Lugar del Proyecto" value="" data-constraints="@Required @JustNumbers" />
-									<span class="empty-message">*This field is required.</span>
-									<span class="error-message">*This is not a valid phone.</span>
+								<label class="name">
+									<input type="text" name="lugar" placeholder="Lugar del Proyecto" value="" data-constraints="@Required" />
+									<span class="empty-message">*Este campo es requerido.</span>
+									<span class="error-message">*Este no es un campo válido.</span>
 								</label>
 							</div>
 							<div class="grid_4">
-								<label class="phone">
-									<input type="text" name="phone" placeholder="Metros Cuadrados" value="" data-constraints="@Required @JustNumbers" />
-									<span class="empty-message">*This field is required.</span>
-									<span class="error-message">*This is not a valid phone.</span>
+								<label class="name">
+									<input type="text" name="metros" placeholder="Metros Cuadrados" value="" data-constraints="@Required " />
+									<span class="empty-message">*Este campo es requerido.</span>
+									<span class="error-message">*Este no es un campo válido.</span>
 								</label>
 							</div>
 						</div>
@@ -177,9 +268,9 @@
 
 
 						<label class="message">
-							<textarea name="message" placeholder="Mensaje" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
-							<span class="empty-message">*This field is required.</span>
-							<span class="error-message">*The message is too short.</span>
+							<textarea name="mensaje" placeholder="Mensaje" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
+							<span class="empty-message">*Este campo es requerido.</span>
+							<span class="error-message">*El mensaje es muy corto.</span>
 						</label>
 						<div class="btns">
 							<a href="#" class="more_btn3" data-type="reset">Limpiar</a>
@@ -207,6 +298,14 @@
 
 
 
+<div class="hover_bkgr_fricc">
+    <span class="helper"></span>
+    <div>
+        <div class="popupCloseButton">X</div>
+        <p>El mensaje se ha enviado con éxito.<br /></p>
+    </div>
+</div>
+
 
 
 	<section id="content">
@@ -220,7 +319,7 @@
 	<footer id="footer">
 		<div class="container">
 			<div class="row">
-				<div class="grid_4" style="text-align: left;">
+				<div class="grid_4 containerAddressFooter" style="text-align: left;">
 					<p style="position: relative;top: 50px;">
 						<a href="tel:+50622608273">
 							+506 2260-8273
@@ -257,7 +356,7 @@
 	</footer>
 
 
-
+<script src="https://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
 <script src="js/script.js"></script>
 
 
@@ -267,6 +366,71 @@
 		// Initialize the gallery
 		$('.magnifier2').touchTouch();
 	 });
+
+	 // validate signup form on keyup and submit
+	$("#contact-form").validate({
+
+		submitHandler: function (form) {
+			
+			if (
+				$("input[name='nombre']").val() != "" &&
+				$("input[name='apellidos']").val() != "" &&
+				$("input[name='telefono']").val() != "" &&
+				$("input[name='email']").val() != "" &&
+				$("input[name='lugar']").val() != "" &&
+				$("input[name='metros']").val() != "" &&
+				$("textarea[name='mensaje']").val()  != "" 
+				){
+
+				var obj = {
+					nombre: $("input[name='nombre']").val(),
+					apellidos: $("input[name='apellidos']").val(),
+					telefono: $("input[name='telefono']").val(),
+					email: $("input[name='email']").val(),
+					lugar: $("input[name='lugar']").val(),
+					metros: $("input[name='metros']").val(),
+					mensaje: $("textarea[name='mensaje']").val()
+				};
+				var json_text = JSON.stringify(obj, null, 2);
+				
+				$.ajax({
+					url: '/api/user/sendFormToPatient',
+					type: 'POST',
+					contentType: 'application/json',
+					data: json_text,
+					success: function (response) {
+
+						console.log("respuesta: " + response);
+						if (response.message == "Email sent") {
+							console.log("sent" );
+							document.getElementById("contact-form").reset();
+							$('.hover_bkgr_fricc').show();
+
+						} 
+
+						
+					}
+				});
+				
+
+			}
+			
+
+		}
+
+	});
+
+	$(window).load(function () {
+	    $(".trigger_popup_fricc").click(function(){
+	       $('.hover_bkgr_fricc').show();
+	    });
+	    $('.hover_bkgr_fricc').click(function(){
+	        $('.hover_bkgr_fricc').hide();
+	    });
+	    $('.popupCloseButton').click(function(){
+	        $('.hover_bkgr_fricc').hide();
+	    });
+	});
 </script>
 
 

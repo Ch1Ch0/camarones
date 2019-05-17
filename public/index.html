@@ -82,14 +82,14 @@
 	=========================================================-->
 	<div class="box-1">
 		<div class="container">
-			<p class="txt1"><span class="bold">LOS MEJORES EN PISCINAS Y SPAS</span></p>
-			<p class="marTop3">Comprometidos a ofrecer un excelente servicio a nuestros clientes, brindamos innovación y soluciones de alta calidad para todo lo relacionado con piscinas y spas:</p>
+			<p class="txt1"><span class="bold titulo_1"></span></p>
+			<p class="marTop3 titulo_1_sub_titulo_1"></p>
 			<p class="marTop3">Construcción y remodelación.
-Mantenimiento.
-Productos de limpieza.
-Equipo y accesorios.
-Enchape en citro-cerámica.
-</p>
+			Mantenimiento.
+			Productos de limpieza.
+			Equipo y accesorios.
+			Enchape en citro-cerámica.
+			</p>
 			<a href="contactar.html" class="more_btn">CONTACTAR</a>
 		</div>
 	</div>
@@ -279,7 +279,7 @@ Enchape en citro-cerámica.
 	<footer id="footer">
 		<div class="container">
 			<div class="row">
-				<div class="grid_4" style="text-align: left;">
+				<div class="grid_4 containerAddressFooter" style="text-align: left;">
 					<p style="position: relative;top: 50px;">
 						<a href="tel:+50622608273">
 							+506 2260-8273
@@ -329,6 +329,33 @@ Enchape en citro-cerámica.
 		// Initialize the gallery
 		$('.magnifier2').touchTouch();
 	 });
+
+	 var obj = {
+		page: "Inicio"
+	};
+	var json_text = JSON.stringify(obj, null, 2);
+	
+	$.ajax({
+		url: '/api/user/getcmscontent',
+		type: 'POST',
+		contentType: 'application/json',
+		data: json_text,
+		success: function (response) {
+
+			console.log("respuesta: " + response);
+			if (response.message == "Records loaded successfully"){
+
+				for (var i = 0; i < response.elements.length; i++) {
+
+					$("."+response.elements[i].campo).text(response.elements[i].valor);
+				    
+				}
+
+			}
+			
+			
+		}
+	});
 </script>
 
 

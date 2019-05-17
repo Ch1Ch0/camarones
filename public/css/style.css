@@ -90,6 +90,74 @@ h4 {
 
 }
 
+.line-break-header {
+    background-color: #ffffff;
+    margin-top: -60px;
+    padding: 5% 20px;
+    -webkit-transform: skewY(-2deg);
+    -moz-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+    -o-transform: skewY(-2deg);
+    transform: skewY(-2deg);
+}
+
+
+.line-break-header-2 {
+    background-color: #0dceea;
+    margin-top: -140px;
+    padding: 5% 20px;
+    -webkit-transform: skewY(2deg);
+    -moz-transform: skewY(2deg);
+    -ms-transform: skewY(2deg);
+    -o-transform: skewY(2deg);
+    transform: skewY(2deg);
+}
+
+
+.container-custom-1 {
+  margin-top: 100px;
+  color: #fff;
+  margin-bottom: 150px;
+}
+
+.container-custom-2 {
+  margin-bottom: 150px;
+  color: #fff;
+}
+
+
+.container-custom-3 {
+     margin-top: 150px;
+    color: #fff;
+    margin-bottom: 50px;
+
+}
+
+ 
+.bold400 ul li {
+  font-weight: 400;
+}
+
+.bold400 p {
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 767px) {
+  .containerAddressFooter{
+    text-align: center !important;
+  }
+
+  .containerLogoFooter img {
+    top: 0 !important;
+    left: 0 !important;
+  }
+
+  .copyrightjireh {
+    margin-left: 0 !important;
+  }
+}
+
+
 @media only screen and (max-width: 979px) {
   .containerLogoFooter img{
     max-width: 265px;
@@ -98,6 +166,11 @@ h4 {
     left: 0px !important;
   }
 
+  .copyrightjireh{
+    margin-left: 35px;
+  }
+
+
 }
 
 
@@ -105,8 +178,12 @@ h4 {
   .containerLogoFooter img{
     max-width: 265px;
     position: relative;
-    top: 0px;
+    top: -20px;
     left: 20px;
+  }
+
+  .line-break-header {
+    margin-top: -25px !important;
   }
 
 }
@@ -126,6 +203,12 @@ h4 {
 
 }
 
+.custom-parallax{
+  background-attachment: fixed !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
 
 
 /*========================================================
@@ -144,8 +227,94 @@ h4 {
   height: 513px;
   background: url(../images/header_bg.jpg) 50% 0 no-repeat #3a3a3a;
 }
+
+
+#header1 {
+  position: relative;
+  z-index: 100;
+  /*height: 1050px;*/
+  /*height: 860px;*/
+  background: url(../images/header_bg1.jpg) 50% 0 no-repeat #3a3a3a;
+  text-align: center;
+  z-index: 1;
+}
+
+#header2 {
+  position: relative;
+  z-index: 100;
+  /*height: 1050px;*/
+  /*height: 860px;*/
+  background: url(../images/header_bg2.jpg) 50% 0 no-repeat #3a3a3a;
+  text-align: center;
+  z-index: 1;
+}
+
+#header3 {
+  position: relative;
+  z-index: 100;
+  /*height: 1050px;*/
+  /*height: 860px;*/
+  background: url(../images/header_bg3.jpg) 50% 0 no-repeat #3a3a3a;
+  text-align: center;
+  z-index: 1;
+}
+
+#header4 {
+  position: relative;
+  z-index: 100;
+  /*height: 1050px;*/
+  /*height: 860px;*/
+  background: url(../images/header_bg4.jpg) 50% 0 no-repeat #3a3a3a;
+  text-align: center;
+  z-index: 1;
+}
+
+#header5 {
+  position: relative;
+  z-index: 100;
+  /*height: 1050px;*/
+  /*height: 860px;*/
+  background: url(../images/header_bg5.jpg) 50% 0 no-repeat #3a3a3a;
+  text-align: center;
+  z-index: 1;
+}
+
+#header6 {
+  position: relative;
+  z-index: 100;
+  /*height: 1050px;*/
+  /*height: 860px;*/
+  background: url(../images/header_bg6.jpg) 50% 0 no-repeat #3a3a3a;
+  text-align: center;
+  z-index: 1;
+}
+
+#header7 {
+  position: relative;
+  z-index: 100;
+  /*height: 1050px;*/
+  /*height: 860px;*/
+  background: url(../images/header_bg7.jpg) 50% 0 no-repeat #3a3a3a;
+  text-align: center;
+  z-index: 1;
+}
+
+#header8 {
+  position: relative;
+  z-index: 100;
+  /*height: 1050px;*/
+  /*height: 860px;*/
+  background: url(../images/header_bg8.jpg) 50% 0 no-repeat #3a3a3a;
+  text-align: center;
+  z-index: 1;
+}
 /* Main menu styles
 ========================================================*/
+
+
+
+
+
 /*========================================================
 										menu variables
 =========================================================*/
@@ -544,11 +713,6 @@ a.link2:hover {
 .marTop18 {
   margin-top: 20px;
 }
-
-.marBot50 {
-  margin-bottom: 50px;
-}
-
 .hline {
   width: 100%;
   height: 1px;
@@ -840,7 +1004,7 @@ a.magnifier2 .zoom {
 }
 .box-2 {
   width: 100%;
-  margin-top: 80px;
+  margin-top: -267px;
   padding: 107px 0 176px;
   position: relative;
   z-index: 11;
@@ -860,7 +1024,7 @@ a.magnifier2 .zoom {
 }
 .box-4 {
   width: 100%;
-  margin-top: 130px;
+  margin-top: -12px;
   padding: 0px 0 185px;
   position: relative;
   z-index: 11;
@@ -899,20 +1063,6 @@ a.magnifier2 .zoom {
   top: -80px;
   background: url(../images/corner1.png) no-repeat 50% 0;
 }
-
-.box-6 {
-  width: 100%;
-  margin-top: -54px;
-  padding: 10px 0 65px;
-  position: relative;
-  z-index: 11;
-  background: #fff;
-  color: #414141;
-  -webkit-clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
-clip-path: polygon(0 8%, 100% 0, 100% 91%, 0% 100%);
-}
-
-
 .corner_bot1 {
   margin-bottom: 79px;
 }
@@ -1217,10 +1367,6 @@ figure a img {
   .box-3 {
     background: #393939;
   }
-
-  .text-box {
-    text-align: center !important;
-  }
 }
 @media only screen and (max-width: 479px) {
   h1 {
@@ -1241,10 +1387,3 @@ figure a img {
   }
 }
 /*Core variables and mixins*/
-
-
-/* Custom CSS */
-
-.text-box {
-  text-align: left;
-}
