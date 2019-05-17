@@ -12,5 +12,4 @@ https://airtable.com/invite/l?inviteId=invJwXCbvIgI7jANm&inviteToken=adeaf5b2fe9
 
 -Aquí pueden ver el repositorio.
 
-Cualquier duda nos la pueden hacer por acá, mensaje directo o a @javier que es el líder de este proyecto y les puede contestar cualquier detalle. (edited) 
-
+Cualquier duda nos la pueden hacer por acá, mensaje directo o a @javier que es el líder de este proyecto y les puede contestar cualquier detalle. 
