@@ -34,11 +34,11 @@ router.post('/getcmscontent', (req, res, next) => {
       // This function (`page`) will get called for each page of records.
 
       records.forEach(function(record, index) {
-          console.log('Retrieved', record.get('Campo'));
 
           elements[index] = {
             campo: record.get('Campo'),
-            valor: record.get('Valor')
+            valor: record.get('Valor'),	
+			      url: (typeof record.get('Imagen') === 'undefined') ? "" : record.get("Imagen")[0].url
           };
 
       });
